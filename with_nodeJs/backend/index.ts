@@ -2,7 +2,7 @@ import express from "express";
 import path from "path";
 import { sampleMerchandiseInfo } from "./db";
 
-const app = express();
+export const app = express();
 const port  = 3000;
 
 app.use(express.static(path.join(__dirname, '../frontend')));
