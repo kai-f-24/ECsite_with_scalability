@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECsite with scalability</title>
+</head>
+<body>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        img {
+            width: 170px;
+            height: auto;
+        }
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .merchandise-card {
+            margin: 16px 12px;
+        }
+    </style>
+
+    <header>
+        <h1>ECsite With Scalability</h1>
+    </header>
+    <section>
+        <% for (var i = 0; i < 30; i++) { %>
+            <div class="merchandise-card">
+                <img src="<%= data.imgPath %>" alt="">
+                <p><%= data.name %></p>
+                <p><%= data.price %></p>
+            </div>
+        <% } %>
+    </section>
+</body>
+</html>
