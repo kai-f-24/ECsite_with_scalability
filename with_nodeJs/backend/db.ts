@@ -23,7 +23,7 @@ export const sampleMerchandiseInfo: sampleMerchandiseInfoInterface = {
 const mongoose = require("mongoose");
 
 mongoose.connect(
-    "mongodb+srv://kainet:LTR7RQQyw8zhumch@cluster0.zxd10jh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+    `mongodb+srv://${username}:${password}@cluster0.zxd10jh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`
     )
     .then(() => console.log('mongoDBに接続しました。'))
     .catch((err: any) => console.log(err));
