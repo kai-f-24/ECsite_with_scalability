@@ -14,9 +14,20 @@
             box-sizing: border-box;
         }
 
-        img {
+        .img-wrapper{
             width: 170px;
-            height: auto;
+            height: 210px;
+            position: relative;
+            overflow: hidden;
+            margin:0 auto;
+        }
+
+        .img-wrapper img{
+            width: 200px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
         }
 
         section {
@@ -33,11 +44,13 @@
         <h1>ECsite With Scalability</h1>
     </header>
     <section>
-        <% for (var i = 0; i < 30; i++) { %>
+        <% for (var i = 0; i < 20; i++) { %>
             <div class="merchandise-card">
-                <img src="<%= data.imgPath %>" alt="">
-                <p><%= data.name %></p>
-                <p><%= data.price %></p>
+                <div class="img-wrapper">
+                    <img src="<%= data[i % 3].imgPath %>" alt="">
+                </div>
+                <p><%= data[i % 3].name %></p>
+                <p><%= data[i % 3].price %></p>
             </div>
         <% } %>
     </section>
